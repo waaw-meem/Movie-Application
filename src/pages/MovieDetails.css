@@ -1,0 +1,103 @@
+/* MovieDetails.css */
+.movie-details-container {
+  position: relative;
+  min-height: 100vh;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.movie-details-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.movie-details-content {
+  position: relative;
+  display: flex;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  z-index: 2;
+  flex-wrap: wrap;
+}
+
+/* Poster Section */
+.movie-details-poster-section {
+  flex: 0 0 300px;
+}
+
+.movie-details-poster {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s ease;
+}
+
+.movie-details-poster:hover {
+  transform: scale(1.05);
+}
+
+/* Info Section */
+.movie-details-info {
+  flex: 1;
+  max-width: 700px;
+}
+
+.movie-details-title {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.movie-details-meta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+  font-size: 1rem;
+  color: #bbb;
+}
+
+.movie-details-meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.movie-details-overview {
+  line-height: 1.6;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color: #ddd;
+}
+
+.movie-details-additional {
+  font-size: 0.95rem;
+  color: #aaa;
+}
+
+.movie-details-additional p {
+  margin-bottom: 8px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .movie-details-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .movie-details-info {
+    max-width: 100%;
+  }
+
+  .movie-details-meta {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
