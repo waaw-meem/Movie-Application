@@ -30,6 +30,8 @@ export const getMovieById = async (id) => {
   }
 };
 
+
+// GET POPULAR MOVIES API FUNCTION
 export const getPopularMovies = async () => {
   try {
     const res = await axios.get(`${BASE_URL}/movie/popular`, {

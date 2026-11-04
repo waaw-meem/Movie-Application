@@ -6,9 +6,11 @@ import SearchMovie from "../components/SearchMovie";
 import "./Home.css";
 
 const Home = () => {
-  const [movies, setMovies] = useState([]);
-  const [loading, setLoading] = useState(true);
 
+  const [movies, setMovies] = useState([]); // STATE TO STORE MOVIES
+  const [loading, setLoading] = useState(true); // STATE TO HANDLE LOADING
+
+  // FETCH POPULAR MOVIES ON COMPONENT MOUNT
   useEffect(() => {
     const fetchPopular = async () => {
       const popular = await getPopularMovies();
@@ -18,8 +20,8 @@ const Home = () => {
     fetchPopular();
   }, []);
 
+  // HANDLE SEARCH FUNCTION
   const handleSearch = async (term) => {
-
     setLoading(true);
     const results = await searchMoviesAPI(term);
     setMovies(results);
